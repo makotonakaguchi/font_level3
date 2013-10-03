@@ -1,0 +1,500 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>fonts</title>
+<link type="text/css" rel="stylesheet" href="shCoreDefault.css" />
+<style>
+
+html { font-size: 85% }
+body {	margin: 1em }
+article { margin: 5rem 0 }
+section { margin: 4rem 0 }
+h1 { font-size: 3.0rem }
+h2 { font-size: 2.0rem }
+h3 { font-size: 1.5rem }
+i { font-style: normal; font-weight: bold }
+a { text-underline-position: under; text-decoration-style: wavy }
+h1,h2,h3 { margin: 0.5rem 0; font-weight: normal; color: #5f5f5f }
+h1 a { color: #5f5f5f }
+ul, dl { margin: 1rem 0 }
+_h3 + p, h3 + ul, h3 + dl { margin-top: 0.5rem }
+.contrast-high	{ color: #000 }
+.contrast-low	{ color: #999 }
+.arrow {
+    display: block;
+    position: relative;
+		  margin-right: 3rem
+}
+.arrow::after {
+    content:"";
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-top: 3px solid #333;
+    border-right: 3px solid #333;
+    -webkit-transform: rotate(45deg);
+		  -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    right: -2rem;
+    top: 50%;
+    margin-top: -0.5rem;	
+	}
+
+
+	
+#fontfamily {
+  font-family: Helvetica, Verdana, sans-serif;
+}
+.serif {
+  font-family: "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", serif;
+}
+.sans-serif {
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS P Gothic", sans-serif;
+}
+.cursive {
+  font-family: cursive;
+}
+.fantasy {
+  font-family: fantasy;
+}
+.monospace {
+  font-family: monospace;
+}
+
+.figurelist { list-style-type: none }
+.figurelist li {	display: inline-block }
+.figurelist figure { margin: 0.5rem; text-align: center }
+.figurelist figcaption { text-align: center }
+.figurelist span { font-size: 5rem }
+	
+.fw100 { font-weight: 100 }
+.fw200 { font-weight: 200 }
+.fw300 { font-weight: 300 }
+.fw400 { font-weight: 400 }
+.fw500 { font-weight: 500 }
+.fw600 { font-weight: 600 }
+.fw700 { font-weight: 700 }
+.fw800 { font-weight: 800 }
+.fw900 { font-weight: 900 }
+
+
+.ultra-condensed { font-stretch: ultra-condensed }
+.extra-condensed { font-stretch: extra-condensed }
+.condensed { font-stretch: condensed }
+.semi-condensed{ font-stretch: semi-condensed }
+.normal{ font-stretch: normal }
+.ultra-condensed { font-stretch: normal }
+.semi-expanded { font-stretch: semi-expanded }
+.extra-expanded { font-stretch: extra-expanded }
+.ultra-expanded { font-stretch: ultra-expanded }
+
+	
+
+.fsnormal { font-style: normal }
+.fsitalic { font-style: italic }
+.fsoblique { font-style: oblique }
+	
+.xx-small { font-size: xx-small !important }
+.x-small { font-size: x-small !important }
+.small { font-size: small !important }
+.medium { font-size: medium !important }
+.large { font-size: large !important }
+.x-large { font-size: x-large !important }
+.xx-large { font-size: xx-large !important }
+
+	
+	
+#relative-size { font-size: smaller }	
+
+	
+	
+p#fsa {
+		margin: 1rem 0;
+		font-family: Futura;
+  font-size: 100px;
+}
+p#fsa span {
+  border: solid 1px red;
+}
+p#fsa .adjust {
+  font-size-adjust: 0.5;
+}
+
+
+	
+p#font { font: bold italic small-caps 16pt "Helvetica Neue", serif }
+
+
+
+@font-face {
+  font-family: 'jpgothic';
+  src: /*local('Shin Go Regular', '新ゴ R'),*/
+			    local('A-OTF 新ゴ Pro'),
+			    url(01FLOPDESIGN.otf) format("opentype");
+		         
+		     /* 
+		      * ひらがな、カタカナ、アルファベット、数字の著作権はフロップデザインに帰属します。
+		      * フォントは以下のライセンスに準じます。		
+		      * IPAフォント（http://ipafont.ipa.go.jp/ipa_font_license_v1.html）
+		      * M+（http://mplus-fonts.sourceforge.jp/mplus-outline-fonts/#license）
+　　　　　* Copyright(c) 2013 M+ FONTS PROJECT　Copyright(c) Information-technology Promotion Agency, Japan (IPA), 2003-2013.
+		      */
+
+}
+@font-face {
+  font-family: 'bodytext';
+  src: /*local('Shin Go Regular', '新ゴ R'),*/
+			    local(HiraKakuPro-W6), local(Meiryo), local('A-OTF 新ゴ Pro B');
+			    font-weight: bold;
+}
+	
+@font-face {
+  font-family: 'bodytext';
+  src: /*local('Shin Go Regular', '新ゴ R'),*/
+			    local(HiraKakuPro-W3), local(Meiryo), local('A-OTF 新ゴ Pro R');
+			    font-weight: normal;
+}
+#webfonts {
+		font-family: 'jpgothic', sans-serif;
+		font-size: 1.5rem
+}
+p#important {
+		font-family: 'bodytext', sans-serif;
+		font-size: 1.5rem;
+		font-weight: bold
+}
+p#bodytext {
+		font-family: 'bodytext', sans-serif;
+		font-size: 1.5rem
+}
+p#weight_bold {
+		font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, serif;
+		font-size: 1.5rem;
+		font-weight: bold
+}
+
+
+
+dl dt { font-weight: bold; font-style: italic }
+#kerning-auto { font-kerning: auto }
+#kerning-normal { font-kerning: normal }
+#kerning-none { font-kerning: none }
+
+	
+
+.common-ligatures { font-variant-ligatures: common-ligatures }
+.contextual { font-variant-ligatures: contextual }
+
+	
+
+.diagonal-fractions { font-variant-numeric: diagonal-fractions }
+.diagonal-fractions { font-variant-numeric: stacked-fractions }
+.diagonal-fractions { font-variant-numeric: slashed-zero }
+
+	
+
+.jis78	{ font-variant-east-asian: jis78 }
+.traditional	{ font-variant-east-asian: traditional }
+.proportional-width	{ font-variant-east-asian: proportional-width }
+.ruby { font-variant-east-asian: ruby }
+	
+</style>
+<script type="text/javascript" src="shCore.js"></script>
+<script type="text/javascript" src="shBrushCss.js"></script>
+<script type="text/javascript" src="shBrushJScript.js"></script>
+<script type="text/javascript" src="shBrushXml.js"></script>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+</head>
+
+
+<body>
+<h1>CSS Fonts Module Level 3 Exmple</h1>
+<article>
+<h2>Basic Font Properties</h2>
+<section>
+<h3 id="fontfamily">Font family: the <i>font-family</i> property</h3>
+
+<dl>
+<dt class="serif">serif</dt>
+<dd class="serif">Serif fonts represent the formal text style for a script. This often means but is not limited to glyphs that have finishing strokes, flared or tapering ends, or have actual serifed endings (including slab serifs). </dd>
+</dl>
+<dl>
+<dt class="sans-serif">sans-serif</dt>
+<dd class="sans-serif">Glyphs in sans-serif fonts, as the term is used in CSS, are generally low contrast (vertical and horizontal stems have the close to the same thickness) and have stroke endings that are plain -- without any flaring, cross stroke, or other ornamentation.</dd>
+</dl>
+<dl>
+<dt class="cursive">cursive</dt>
+<dd class="cursive">Glyphs in cursive fonts generally use a more informal script style, and the result looks more like handwritten pen or brush writing than printed letterwork.</dd>
+</dl>
+<dl>
+<dt class="fantasy">fantasy</dt>
+<dd class="fantasy">Fantasy fonts are primarily decorative or expressive fonts that contain playful representations of characters.</dd>
+</dl>
+<dl>
+<dt class="monospace">monospace</dt>
+<dd class="monospace">The sole criterion of a monospace font is that all glyphs have the same fixed width.</dd>
+</dl>
+</section>
+
+<section>
+<h3>Font weight: the <i>font-weight</i> property</h3>
+<ul class="figurelist">
+  <li><figure><span class="fw100">A</span><figcaption>100<br>Thin</figcaption></figure></li>
+  <li><figure><span class="fw200">A</span><figcaption>200<br>Extra Light</figcaption></figure></li>
+	 <li><figure><span class="fw300">A</span><figcaption>300<br>Light</figcaption></figure></li>
+	 <li><figure><span class="fw400">A</span><figcaption>400<br>Normal</figcaption></figure></li>
+	 <li><figure><span class="fw500">A</span><figcaption>500<br>Medium</figcaption></figure></li>
+	 <li><figure><span class="fw600">A</span><figcaption>600<br>Semi Bold</figcaption></figure></li>
+	 <li><figure><span class="fw700">A</span><figcaption>700<br>Bold</figcaption></figure></li>
+	 <li><figure><span class="fw800">A</span><figcaption>800<br>Extra Bold</figcaption></figure></li>
+  <li><figure><span class="fw900">A</span><figcaption>900<br>Black</figcaption></figure></li>
+</ul>
+
+	<ul class="figurelist">
+  <li><figure><span class="fw100">永</span><figcaption>100<br>Thin</figcaption></figure></li>
+  <li><figure><span class="fw200">永</span><figcaption>200<br>Extra Light</figcaption></figure></li>
+	 <li><figure><span class="fw300">永</span><figcaption>300<br>Light</figcaption></figure></li>
+	 <li><figure><span class="fw400">永</span><figcaption>400<br>Normal</figcaption></figure></li>
+	 <li><figure><span class="fw500">永</span><figcaption>500<br>Medium</figcaption></figure></li>
+	 <li><figure><span class="fw600">永</span><figcaption>600<br>Semi Bold</figcaption></figure></li>
+	 <li><figure><span class="fw700">永</span><figcaption>700<br>Bold</figcaption></figure></li>
+	 <li><figure><span class="fw800">永</span><figcaption>800<br>Extra Bold</figcaption></figure></li>
+  <li><figure><span class="fw900">永</span><figcaption>900<br>Black</figcaption></figure></li>
+</ul>
+</section>
+
+<section>
+<h3>Font width: the <i>font-stretch</i> property</h3>
+<ul class="figurelist">
+  <li><figure><span class="ultra-condensed">あ</span><figcaption>ultra-condensed</figcaption></figure></li>
+  <li><figure><span class="extra-condensed">あ</span><figcaption>extra-condensed</figcaption></figure></li>
+	 <li><figure><span class="condensed">あ</span><figcaption>condensed</figcaption></figure></li>
+	 <li><figure><span class="semi-condensed">あ</span><figcaption>semi-condensed</figcaption></figure></li>
+	 <li><figure><span class="normal">あ</span><figcaption>normal</figcaption></figure></li>
+	 <li><figure><span class="semi-expanded">あ</span><figcaption>semi-expanded</figcaption></figure></li>
+	 <li><figure><span class="expanded">あ</span><figcaption>expanded</figcaption></figure></li>
+	 <li><figure><span class="extra-expanded">あ</span><figcaption>extra-expanded</figcaption></figure></li>
+  <li><figure><span class="ultra-expanded">あ</span><figcaption>ultra-expanded</figcaption></figure></li>
+</ul>
+</section>
+
+<section>	
+<h3>Font style: the <i>font-style</i> property</h3>
+<ul class="figurelist">
+  <li><figure><span class="fsnormal">a</span><figcaption>normal</figcaption></figure></li>
+  <li><figure><span class="fsitalic">a</span><figcaption>italic</figcaption></figure></li>
+	 <li><figure><span class="fsoblique">a</span><figcaption>oblique</figcaption></figure></li>
+</ul>	
+</section>
+
+<section>
+<h3>Font size: the <i>font-size</i> property</h3>
+<dl>
+<dt>absolute-size</dt>
+<dd>
+<ul class="figurelist">
+  <li><figure><span class="xx-small">あ</span><figcaption>xx-small (h6)</figcaption></figure></li>
+  <li><figure><span class="x-small">あ</span><figcaption>x-small</figcaption></figure></li>
+	 <li><figure><span class="small">あ</span><figcaption>small (h5)</figcaption></figure></li>
+	 <li><figure><span class="medium">あ</span><figcaption>medium (h4)</figcaption></figure></li>
+	 <li><figure><span class="large">あ</span><figcaption>large (h3)</figcaption></figure></li>
+	 <li><figure><span class="x-large">あ</span><figcaption>x-large (h2)</figcaption></figure></li>
+	 <li><figure><span class="xx-large">あ</span><figcaption>xx-large (h1)</figcaption></figure></li>
+</ul>
+</dd>
+</dl>
+<dl>
+<dt>relative-size</dt>
+<dd>
+<p>For example, if the parent element has a font size of ‘medium’, a value of ‘larger’ will make the font size of the current element be ‘large’.</p>
+<p id="relative-size">If the parent element's size is not close to a table entry, the user agent is free to interpolate between table entries or round off to the closest one. The user agent may have to extrapolate table values if the numerical value goes beyond the keywords.</p>
+</dd>
+</dl>
+</section>	
+
+<section>
+<h3>Relative sizing: the <i>font-size-adjust</i> property</h3>
+<p id="fsa"><span>b</span><span class="adjust">b</span></p>
+</section>
+
+<section>
+<h3>Shorthand font property: the <i>font</i> property</h3>
+<p id="font">The font used for labeling small controls.</p>
+</section>
+</article>
+
+
+	
+<article>
+<h2>Font Resources</h2>
+<section>
+<h3>The <i>@font-face</i> rule</h3>
+<p id="webfonts">この文章は、お使いのパソコンに新ゴがインストールされていなければ、サーバーに置いたフロップデザインフォント（オープンソースフォント）を利用・表示します。</p>
+<blockquote>
+<p>ひらがな、カタカナ、アルファベット、数字の著作権はフロップデザインに帰属します。このフォントをご使用になるには、解凍したダウンロードファイルに含まれる「M+FONT-TESTFLIGHT」「IPAフォントライセンス」の2つの 内容を読みください。It is requested to read and accept “IPA Font License and M+FONT” before downloading Font.　ダウンロードはページ下側のフォントのダウンロードボタンを押してダウンロードして下さい。<br>
+          フォントは以下のライセンスに準じます。フォント同梱のテキストをお読み下さい。<br>
+          * IPAフォント (IPA_Font_License_Agreement_v1.0.txt)<br>
+          * M+ (LICENSE_J,LICENSE_E)<br>
+          Copyright(c) 2013 M+ FONTS PROJECT　Copyright(c) Information-technology Promotion Agency, Japan (IPA), 2003-2013.<br>
+        元となるIPAフォントに置き換える場合 IPAフォントのページでIPAゴシックを入手して下さい。M+はあらゆる改変の有無に関わらず、また商業的な利用であっても、自由に利用、複製、再配布することができるオープンソースのフォントです。</p>
+</blockquote>
+
+<p id="important">@font-faceルール内でfont-weightプロパティを「太字」で指定すると太字のフォントとして登録することができます。<br>
+	たとえば、ある段落にfont-weightプロパティを太字として指定すると、前述の「太字」として指定したフォントが適用されます。</p>
+	<p id="weight_bold">この文章は通常の太さのフォントに「太字」を適用しました。</p>
+	<p id="bodytext">とくに文字は、時間や場所を超える情報の伝達手段として発展してきたのです。
+かつて石に彫られたり、木に筆で書かれていた文字は、やがて木版や金属活字で印刷されるようになり、写真植字を経て、現代ではDTPシステムによるデジタルフォントが数多く使われるようになりました。</p>
+<p>People have been informed the knowledge and ideas to the others by speaking languages, using letters since early times. Especially letters have been expanded as methods of communication beyond time and place.</p>
+
+
+
+</section>
+	
+
+
+</article>
+
+
+<article>
+<h2>Font Feature Properties</h2>
+<section>
+<h3>Kerning: the <i>font-kerning</i> property</h3>
+<dl>
+<dt>auto</dt>
+<dd id="kerning-auto"><p>Specifies that kerning is applied at the discretion of the user agent</p><p>プロポーショナルフォントの文字同士の間隔（アキ）を調整する技法のこと。</p></dd>
+</dl>
+<dl>
+<dt>normal</dt>
+<dd id="kerning-normal"><p>Specifies that kerning is applied</p><p>プロポーショナルフォントの文字同士の間隔（アキ）を調整する技法のこと。</p></dd>
+</dl>
+<dl>
+<dt>none</dt>
+<dd id="kerning-none"><p>Specifies that kerning is not applied</p><p>プロポーショナルフォントの文字同士の間隔（アキ）を調整する技法のこと。</p></dd>
+</dl>
+</section>
+
+<section>
+<h3>Ligatures: the <i>font-variant-ligatures</i> property</h3>
+<dl>
+<dt>common-ligatures</dt>
+<dd>
+<ul class="figurelist">
+  <li class="arrow"><figure><span class="contrast-low">fi</span></figure></li>
+  <li><figure><span class="common-ligatures">fi</span></figure></li>
+</ul>
+</dd>
+</dl>
+<dl>
+<dt>contextual</dt>
+<dd>
+<ul class="figurelist">
+  <li class="arrow"><figure><span class="contrast-low">labor of love</span></figure></li>
+  <li><figure><span class="contextual">labor of love</span></figure></li>
+</ul>
+</dd>
+</dl>
+</section>
+	
+<section>
+<h3>Subscript and superscript forms: the <i>font-variant-position</i> property</h3>
+<dl>
+<dt>sub</dt>
+<dd>
+<ul class="figurelist">
+  <li><figure><span class="contrast-low">C</span><span class="sub">7</span></figure></li>
+	 <li><figure><span class="contrast-low">H</span><span class="sub">16</span></figure></li>
+	 <li><figure><span class="contrast-low">N</span><span class="sub">5</span></figure></li>
+  <li><figure><span class="contrast-low">O</span><span class="sub">13</span></figure></li>
+	 <li><figure><span class="contrast-low">P</span><span class="sub">3</span></figure></li>
+</ul>
+</dd>
+</dl>
+<dl>
+<dt>super</dt>
+<dd>
+<ul class="figurelist">
+  <li><figure><span class="contrast-low">a</span><span class="super">2</span></figure></li>
+	 <li><figure><span class="contrast-low">a</span><span class="super">[2a]</span></figure></li>
+	 <li><figure><span class="contrast-low">a</span><span class="super">[<span class="super">2</span>a]</span></figure></li>
+</ul>
+</dd>
+</dl>
+</section>
+
+<section>
+<h3>Numerical formatting: the <i>font-variant-numeric</i> property</h3>
+<dl>
+<dt>diagonal-fractions</dt>
+<dd>
+<ul class="figurelist">
+  <li class="arrow"><figure><span class="contrast-low">2</span><span>1/3</span></figure></li>
+	 <li><figure><span class="contrast-low">2</span><span class="diagonal-fractions">1/3</span></figure></li>
+</ul>
+</dd>
+</dl>
+<dl>
+<dt>stacked-fractions</dt>
+<dd>
+<ul class="figurelist">
+  <li class="arrow"><figure><span class="contrast-low">2</span><span>1/3</span></figure></li>
+	 <li><figure><span class="contrast-low">2</span><span class="stacked-fractions">1/3</span></figure></li>
+</ul>
+</dd>
+</dl>
+<dl>
+<dt>slashed-zero</dt>
+<dd>
+<ul class="figurelist">
+  <li class="arrow"><figure><span class="contrast-low">4</span><span>000</span></figure></li>
+	 <li><figure><span class="contrast-low">4</span><span class="slashed-zero">000</span></figure></li>
+</ul>
+</dd>
+</dl>
+</section>	
+	
+<section>
+<h3>East Asian text rendering: the <i>font-variant-east-asian</i> property</h3>
+<dl>
+<dt>jis78</dt>
+<dd>
+<ul class="figurelist">
+  <li class="arrow"><figure><span class="contrast-low">麹町</span></figure></li>
+	 <li><figure><span class="jis78">麹町</span></figure></li>
+</ul>
+</dd>
+</dl>
+<dl>
+<dt>traditional</dt>
+<dd>
+<ul class="figurelist">
+  <li class="arrow"><figure><span class="contrast-low">大学</span></figure></li>
+	 <li><figure><span class="traditional">大学</span></figure></li>
+</ul>
+</dd>
+</dl>
+<dl>
+<dt>proportional-width</dt>
+<dd>
+<ul class="figurelist">
+  <li class="arrow"><figure><span class="contrast-low">欧文フォント</span></figure></li>
+	 <li><figure><span class="contrast-low">欧文</span><span class="proportional-width">フォント</span></figure></li>
+</ul>
+</dd>
+</dl>
+<dl>
+<dt>ruby</dt>
+<dd>
+<ul class="figurelist">
+  <li><figure><span class="ruby"><ruby>新幹線<rt>しんかんせん</rt></ruby></span></figure></li>
+</ul>
+</dd>
+</dl>
+</section>
+	
+</article>
+
+</body>
+</html>
